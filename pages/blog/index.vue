@@ -1,5 +1,3 @@
 <template>
-  <div>
-    All blog posts.
-  </div>
+  <div>All blog posts.</div>
 </template>
