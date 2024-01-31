@@ -13,3 +13,33 @@
     </main>
   </div>
 </template>
+
+<script setup>
+useHead({
+  titleTemplate: '%s - Lucas Bertoncello',
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com',
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+      crossorigin: '',
+    },
+  ],
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+
+useSeoMeta({
+  twitterCard: 'summary',
+})
+</script>
+
+<style>
+body {
+  font-family: 'Roboto';
+}
+</style>
