@@ -8,7 +8,7 @@
       </div>
       <NavbarMenu />
     </header>
-    <main class="p-2 mt-10">
+    <main class="p-2">
       <slot />
     </main>
   </div>
