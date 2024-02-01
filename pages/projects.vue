@@ -4,3 +4,12 @@
     <ProjectList />
   </div>
 </template>
+
+<script setup>
+useSeoMeta({
+  title: 'Projects',
+  description: 'This is the Projects page',
+  ogTitle: 'Projects Page',
+  twitterTitle: 'Projects Page',
+})
+</script>
