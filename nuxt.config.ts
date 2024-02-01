@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/eslint-module',
     '@nuxtjs/color-mode',
+    '@nuxt/content',
   ],
   // To make Color Mode compatible with TailWind
   colorMode: {
