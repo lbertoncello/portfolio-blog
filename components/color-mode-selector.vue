@@ -4,7 +4,7 @@
       Change to {{ nextMode }}
     </div>
     <button
-      class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500"
+      class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500 text-4xl md:text-base"
       @click="toggleMode"
       @mouseenter="showNextModelLabel = true"
       @mouseleave="showNextModelLabel = false"
