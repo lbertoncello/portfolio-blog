@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/content',
   ],
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
   content: {
     highlight: {
       theme: {
