@@ -11,7 +11,7 @@
           <aside class="sticky top-8">
             <div class="font-semibold mb-2">Table of Contents</div>
             <nav>
-              <TocLinks :links="doc.body?.toc?.links" />
+              <TocLinks :links="doc.body?.toc?.links" :active-id="activedId" />
             </nav>
           </aside>
         </div>
@@ -19,3 +19,34 @@
     </ContentDoc>
   </article>
 </template>
+
+<script setup>
+const activedId = ref(null)
+
+/*
+ * This entire block is intended to keep track of the current selected section
+ * and mark it as active on the Table of Contents.
+ */
+onMounted(() => {
+  const callback = (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        activedId.value = entry.target.id
+        break
+      }
+    }
+  }
+  const observer = new IntersectionObserver(callback, {
+    root: null,
+    threshold: 0.5,
+  })
+  const elements = document.querySelectorAll('h2, h3')
+  // Set the selected elements to be all observed
+  elements.forEach((element) => observer.observe(element))
+
+  // Unbsorve all elements before changing the current page
+  onBeforeUnmount(() => {
+    elements.forEach((element) => observer.unobserve(element))
+  })
+})
+</script>
